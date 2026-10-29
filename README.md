@@ -22,7 +22,7 @@ All content lives in `src/data/` (skills, projects, experience, certifications, 
 - `src/index.css`: Tailwind import, theme colours and fonts, custom CSS
 
 ## Deployment
-Static site: `npm run build` produces `dist/`, hosted on <Vercel / GitHub Pages>. No backend or database.
+Static site: `npm run build` produces `dist/`, hosted on Vercel.
 
 ## External assets
 Font Awesome 6.4 icons (cdnjs) and the Inter and Space Grotesk fonts (Google Fonts) load from CDNs in `index.html`.
