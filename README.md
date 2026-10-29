@@ -2,7 +2,7 @@
 
 Personal portfolio built with React, Vite and Tailwind CSS v4. A migration of a static HTML design into components; the layout and look are unchanged.
 
-**Live:** [<your deployed URL>](https://portfolio-web-eight-chi-47.vercel.app/)
+**Live:** [[<your deployed URL>](https://portfolio-web-eight-chi-47.vercel.app/)](https://portfolio-web-eight-chi-47.vercel.app/)
 
 ## Run locally
 Requires Node.js 20+ and npm.
