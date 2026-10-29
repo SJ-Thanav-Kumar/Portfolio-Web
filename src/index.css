@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0d0d0d;
+  --color-light: #e5e5e5;
+  --color-muted: #888888;
+  --color-border: rgba(255, 255, 255, 0.15);
+  --color-border-hover: rgba(255, 255, 255, 0.3);
+
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #e5e5e5;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.nav-link {
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.pill {
+  transition: all 0.2s ease;
+}
+.pill:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
