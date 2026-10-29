@@ -1,16 +1,28 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio built with React, Vite and Tailwind CSS v4. A migration of a static HTML design into components; the layout and look are unchanged.
 
-Currently, two official plugins are available:
+**Live:** <your deployed URL>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
+Requires Node.js 20+ and npm.
 
-## React Compiler
+    npm install
+    npm run dev      # development server
+    npm run build    # production build into dist/
+    npm run preview  # serve the production build locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Editing content
+All content lives in `src/data/` (skills, projects, experience, certifications, publications). Edit those files; the sections update automatically. Replace the `[placeholders]` in certifications and publications when you have real entries. Your resume is `public/resume.pdf`.
 
-## Expanding the Oxlint configuration
+## Structure
+- `src/sections/`: one component per page section
+- `src/components/`: shared pieces (navbar, divider, section header, floating toggle, footer)
+- `src/data/`: content as plain JavaScript arrays
+- `src/index.css`: Tailwind import, theme colours and fonts, custom CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Deployment
+Static site: `npm run build` produces `dist/`, hosted on <Vercel / GitHub Pages>. No backend or database.
+
+## External assets
+Font Awesome 6.4 icons (cdnjs) and the Inter and Space Grotesk fonts (Google Fonts) load from CDNs in `index.html`.
